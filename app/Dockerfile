@@ -28,4 +28,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 CMD wget -
 # Run as non-root for security
 USER node
 
-CMD ["node", "dist/main.js"]
+CMD ["node", "dist/index.js"]

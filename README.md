@@ -31,6 +31,9 @@ environment to Green (v2), with automatic rollback if error rates spike.
 6. CloudWatch monitors 5xx error rate — auto-rollback if threshold exceeded
 7. Blue task set terminated 5 minutes after successful cutover
 
+## Architectural Diagram
+<img width="2549" height="1967" alt="bluegreen_bank_api_architecture" src="https://github.com/user-attachments/assets/5ebed729-2b42-4ccd-a00b-2c318b2a7ce6" />
+
 ## Key Architecture Decisions
 
 **VPC Endpoints over NAT Gateway**

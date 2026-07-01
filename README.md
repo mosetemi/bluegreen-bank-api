@@ -10,20 +10,6 @@ simulates exactly that constraint — a live payment API that must stay availabl
 during version updates. CodeDeploy shifts traffic gradually from the Blue (v1)
 environment to Green (v2), with automatic rollback if error rates spike.
 
-## Architecture
-Internet → ALB (port 80 prod / 8080 test)
-↓
-CodeDeploy
-(10% traffic shift/min)
-↙        ↘
-Blue (v1)    Green (v2)
-ECS Fargate  ECS Fargate
-(private subnets)
-↓
-ECR ← GitHub Actions CI/CD
-↓
-CloudWatch Alarms → Auto-Rollback
-
 ## Tech Stack
 
 - **App** — Node.js 24, TypeScript, Express 5
